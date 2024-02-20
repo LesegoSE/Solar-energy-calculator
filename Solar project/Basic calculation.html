@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src= https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    
+    <title>Basic calculation</title>
+</head>
+<body>
+    
+    <h1>Basic energy calculation</h1>
+    <!--Summer buttons inputs-->
+    <div class="calculation">
+      <br> 
+
+      <!-- Consumption-->
+      Consumption:
+      <input type="number"  value="0" id="consumption-input" ><br>
+      <br>
+
+      <!-- solar panels generation -->
+      Solar panel generation:
+      <input type="number"  value="0" id="sol-Pan-Gen-input" ><br>
+      <br>  
+
+      <!-- battery energy-->
+      Battery capacity
+      <input type="number"  value="0" id="battery-Cap-input" ><br>
+      <br>
+
+      <!-- day night consumption-->
+      Day / Nigth consumption precentage <b>(%) </b>: 
+      <input type="number"  value="0" name="" id="day-night-perc-input" ><br>
+      <br>
+
+      
+
+      <!-- button to add values to the array-->
+      <button type="button" name="button" onclick="return myFun(), myFun1()">Calculate</button><br>
+
+
+    <hr color="black" size="20%">
+      
+    <br>The energy needed in <b>Summer</b> is:<br>
+    <!-- Display-->
+    <span id= "results"></span><br>
+    <br>
+    <!-- Display day/night consumption-->
+    during the day/night you use:
+    <br>
+    <span id="cons-perc"></span>
+    </div>
+    <!-- Display graph-->
+    <br>
+    <div class="container">
+        <canvas id="mySummerChart"></canvas>
+    </div>
+    <hr color="black" size="20%">
+    <!-- WINTER GRAPH-->
+    <br>The energy needed in <b>Winter</b> is:<br>
+    <!-- Display graph-->
+    <span id= "results1"></span><br>
+    <!-- Display day/night consumption-->
+    during the day/night you use:
+    <br>
+    <span id="cons-perc-w"></span>
+    </div>
+    <!-- Display graph-->
+    <div class="container">
+        <canvas id="myWinterChart"></canvas>
+    </div>
+
+    <script src="solarScript.js"></script>
+
+
+</body>
+</html>
